@@ -17,6 +17,12 @@
             CleanOldData();
         }
 
+        //Получить минимальную и максимальную цену
+        public (double, double) GetMinAndMaxPrice(DateTime from, DateTime to)
+        {
+            return (GetMinMaxPrice(from, to, true), GetMinMaxPrice(from, to, false));
+        }
+
         //Получить минимальную цену
         public double GetMinPrice(DateTime from, DateTime to)
         {
